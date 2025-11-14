@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, TrendingUp, Shield, Clock } from "lucide-react";
+import antesImg from "@/assets/antes.png";
+import depoisImg from "@/assets/depois.png";
+import jornalImg from "@/assets/jornal.png";
 
 export default function Resultado() {
   return (
@@ -24,67 +27,84 @@ export default function Resultado() {
             </p>
           </motion.div>
 
-          {/* Results Card */}
+          {/* Before/After Images */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-[#1e293b] to-[#0f172a] rounded-2xl p-8 sm:p-12 mb-12 border border-primary/20"
+            className="mb-12"
           >
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              
-              {/* Left Side - Woman Image */}
-              <div className="relative">
-                <div className="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
-                  <img
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop"
-                    alt="Mulher satisfeita"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-secondary text-white px-6 py-3 rounded-lg font-bold shadow-lg">
-                  Aprovado por especialistas
-                </div>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {/* Before Image */}
+              <div className="relative rounded-2xl overflow-hidden">
+                <img
+                  src={antesImg}
+                  alt="Antes"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
-              {/* Right Side - Benefits */}
-              <div className="space-y-6">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-                  Seu Potencial de Crescimento:
-                </h2>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold text-lg">Aumento de 4-7cm</p>
-                      <p className="text-gray-400 text-sm">Crescimento natural e permanente</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold text-lg">Resultados em 30 dias</p>
-                      <p className="text-gray-400 text-sm">Mudanças visíveis já na primeira semana</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold text-lg">100% Natural</p>
-                      <p className="text-gray-400 text-sm">Sem medicamentos ou cirurgias</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold text-lg">Método Comprovado</p>
-                      <p className="text-gray-400 text-sm">Usado por mais de 12.847 homens</p>
-                    </div>
-                  </div>
+              {/* After Image */}
+              <div className="relative rounded-2xl overflow-hidden">
+                <img
+                  src={depoisImg}
+                  alt="Depois"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Newspaper Screenshot */}
+            <div className="rounded-2xl overflow-hidden">
+              <img
+                src={jornalImg}
+                alt="Matéria de jornal"
+                className="w-full h-auto"
+              />
+            </div>
+          </motion.div>
+
+          {/* Benefits Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-[#1e293b] to-[#0f172a] rounded-2xl p-8 sm:p-12 mb-12 border border-primary/20"
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
+              Seu Potencial de Crescimento:
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-semibold text-lg">Aumento de 4-7cm</p>
+                  <p className="text-gray-400 text-sm">Crescimento natural e permanente</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-semibold text-lg">Resultados em 30 dias</p>
+                  <p className="text-gray-400 text-sm">Mudanças visíveis já na primeira semana</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-semibold text-lg">100% Natural</p>
+                  <p className="text-gray-400 text-sm">Sem medicamentos ou cirurgias</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-semibold text-lg">Método Comprovado</p>
+                  <p className="text-gray-400 text-sm">Usado por mais de 12.847 homens</p>
                 </div>
               </div>
             </div>
@@ -94,7 +114,7 @@ export default function Resultado() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12"
           >
             <div className="bg-[#1e293b] rounded-xl p-6 text-center border border-primary/10 hover:border-primary/30 transition-all">
@@ -120,7 +140,7 @@ export default function Resultado() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             className="bg-gradient-to-r from-secondary to-secondary/80 rounded-2xl p-8 sm:p-12 text-center"
           >
             <h2 className="text-3xl sm:text-4xl font-black mb-4">
@@ -156,7 +176,7 @@ export default function Resultado() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 1 }}
             className="mt-12 text-center"
           >
             <p className="text-gray-500 text-sm max-w-2xl mx-auto">
