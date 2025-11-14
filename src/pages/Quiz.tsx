@@ -160,7 +160,7 @@ export default function Quiz() {
                         checked={selectedOption === option}
                         onChange={() => handleOptionSelect(option)}
                       />
-                      <div className="w-full p-4 rounded-lg border border-border text-gray-300 peer-checked:bg-[#1e293b] peer-checked:border-primary peer-checked:text-white transition-colors duration-200 hover:border-primary/50">
+                      <div className="w-full p-4 rounded-lg border border-border text-gray-300 peer-checked:bg-[#1e293b] peer-checked:border-primary peer-checked:text-white transition-colors duration-200 hover:border-primary/50 shadow-lg peer-checked:shadow-primary/30">
                         <span className="flex items-center">
                           <span className="w-5 h-5 mr-4 rounded-full border-2 border-gray-500 flex-shrink-0 peer-checked:border-primary peer-checked:bg-transparent peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-offset-card peer-checked:ring-primary flex items-center justify-center">
                             {selectedOption === option && (
